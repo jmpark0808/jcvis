@@ -96,8 +96,10 @@ articles = ET.SubElement(root, 'articles', attrib={"xmlns:xsi":"http://www.w3.or
 batch_ind = 0 
 batch_count = 0
 for index, row in df.iterrows():
+    print(row['Paper ID'])
     if int(row['Paper ID']) in ignore_paper_id or not str(row['Paper ID']) in pdf_name:
         continue
+    
     date_submitted = row["Last Modified"].split(' ')[0]
     
 
@@ -153,6 +155,7 @@ for index, row in df.iterrows():
     ET.SubElement(publication, 'id', attrib={'type': 'doi',
                                              'advice': 'update'}).text = doi+'.'+str(article_id)
     ET.SubElement(publication, 'title', attrib={'locale': 'en_US'}).text = row['Paper Title']
+    print(row['Paper Title'])
     ET.SubElement(publication, 'abstract', attrib={'locale': 'en_US'}).text = row['Abstract']
     ET.SubElement(publication, 'copyrightHolder', attrib={'locale': 'en_US'}).text = row['Author Names'].split(';')[0].strip().replace('*', '')
     ET.SubElement(publication, 'copyrightYear').text = str(year)
@@ -239,4 +242,4 @@ for index, row in df.iterrows():
 if batch_ind != 0:
     tree = ET.ElementTree(root)
     ET.indent(tree, '  ')
-    tree.write("./filename.xml", xml_declaration=True, encoding='UTF-8')
+    tree.write(f"./{batch_count}.xml", xml_declaration=True, encoding='UTF-8')
