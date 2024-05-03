@@ -22,9 +22,11 @@ CameraReady 1-37
 │       └───SomeOtherPaper.pdf
 │ ...
 ``` 
-3. There are some hardcoded variables defined at the top of the python script (such as volumne, number, doi, issue title, etc) that needs to be changed to fit your current publication. Once you have all the variables and paths set, activate your virtual environment and run:
+3. There are some hardcoded variables defined at the top of the python script (such as volumne, number, etc) that needs to be changed to fit your current publication. Once you have all the variables and paths set, activate your virtual environment and run:
 ```
 python main.py
 ```
-4. Since the importing tool does not allow more than 15 articles at once, this script will generate multiple XML files. Import these XML files one at a time to accumulate the articles for the same issue. 
-##
+4. Since the importing tool does not allow more than 15 articles at once, this script will generate multiple XML files (based on the batch_size variable). Import these XML files one at a time to accumulate the articles for the same issue. 
+
+## Example
+If you would like to see an example of the directories of the camera ready files and an Excel file with the meta data, checkout the ep/example branch.
