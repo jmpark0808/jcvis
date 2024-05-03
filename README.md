@@ -27,4 +27,6 @@ CameraReady 1-37
 python main.py
 ```
 4. Since the importing tool does not allow more than 15 articles at once, this script will generate multiple XML files. Import these XML files one at a time to accumulate the articles for the same issue. 
-##
+
+## Example
+If you would like to see an example of the directories of the camera ready files and an Excel file with the meta data, checkout the ep/example branch.
