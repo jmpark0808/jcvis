@@ -29,4 +29,4 @@ python main.py
 4. Since the importing tool does not allow more than 15 articles at once, this script will generate multiple XML files (based on the batch_size variable). Import these XML files one at a time to accumulate the articles for the same issue. To upload to OJS / JCVIS, first login to jcvis.net. Next, select 'Tools' on the left, then within Import/Export, select 'Native XML Plugin'. Upload the generated XML files one by one. It may take as 15-20 seconds per file (usually a bit more than 1 second per article within the file). Wait until the website confirms the import was successful (or, on subsequent uploads, gives a warning that the issue already exists and that the import was successful).
 
 ## Example
-If you would like to see an example of the directories of the camera ready files and an Excel file with the meta data, checkout the ep/example branch.
+If you would like to see an example of the directories of the camera ready files and an Excel file with the meta data, please email j97park@uwaterloo.ca
